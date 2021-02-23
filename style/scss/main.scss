@@ -1,0 +1,199 @@
+@import "theme";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-image: url("../../images/desktop/image-hero.jpg");
+  background-size: cover;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, auto);
+  color: map-get($color, "white");
+}
+
+.nav {
+  grid-column: 2 / 12;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+
+  .nav-link {
+    width: 22em;
+    ul {
+      display: flex;
+      max-width: 100%;
+      list-style: none;
+
+      justify-content: space-between;
+      white-space: nowrap;
+    }
+  }
+
+  .nav-title {
+    flex: 1;
+  }
+}
+
+.header-content {
+  grid-row: 2;
+  grid-column: 2 / 12;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+
+  .header-title {
+    border: 1px solid white;
+    width: max-content;
+    font-size: 40px;
+    width: 12em;
+    letter-spacing: 2px;
+    padding-left: 3px;
+    text-transform: uppercase;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 25px;
+
+    h2 {
+      font-weight: 400;
+    }
+  }
+}
+
+.section-container {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-row: auto;
+  position: relative;
+
+  .section-content {
+    grid-column: 2 / 12;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    .section-img {
+      position: absolute;
+      display: flex;
+      width: 700px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .section-desc {
+      position: absolute;
+      width: 25em;
+      padding: 5em;
+
+      h1 {
+        text-transform: uppercase;
+      }
+      background-color: white;
+      z-index: 1;
+      right: 0em;
+      bottom: 0;
+    }
+  }
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.gallery-content {
+  grid-column: 2 / 12;
+
+  .gallery-nav {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      flex-grow: 1;
+    }
+
+    button {
+      padding: 0.5em 2em;
+      height: fit-content;
+      text-transform: uppercase;
+      background: white;
+      border: 1px solid map-get($color, "dark-gray");
+      font-weight: 700;
+    }
+    button:focus {
+      outline: none;
+    }
+  }
+
+  .gallery-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .gallery-img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 13em;
+      height: 23em;
+      max-width: 13em;
+      max-height: 23em;
+      display: flex;
+      padding: 1em;
+      align-items: flex-end;
+      font-size: 1em;
+      color: map-get($color, "white");
+      margin-top: 1em;
+    }
+  }
+}
+
+footer {
+  color: map-get($color, "white");
+  background-color: map-get($color, "black");
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: 1em;
+
+  .footer-container {
+    grid-column: 2/12;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+
+    .footer-nav {
+      flex-grow: 1;
+      ul {
+        width: 20em;
+        display: flex;
+        max-width: 100%;
+        list-style: none;
+        padding: 0;
+        justify-content: space-between;
+        white-space: nowrap;
+      }
+    }
+
+    .footer-copyright {
+      .footer-social {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 1em;
+      }
+    }
+  }
+}
