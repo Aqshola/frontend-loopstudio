@@ -1,9 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+.font-josefin, .header .header-content .header-title h2, .section-container .section-content .section-desc h1, .gallery-content .gallery-nav h2, .gallery-content .gallery-nav button, .gallery-content .gallery-section .gallery-img h6, footer .footer-container .footer-copyright h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.font-alata, .header .nav .nav-link ul, .header .nav .nav-title, .section-container .section-content .section-desc p, footer .footer-container .footer-nav h2, footer .footer-container .footer-nav ul {
+  font-family: "Alata", sans-serif;
+}
+
+.animate-hover::after, .header .nav .nav-link ul a::after, footer .footer-container .footer-nav ul a::after, footer .footer-container .footer-copyright .footer-social .social-container::after {
+  content: "";
+  height: 2px;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  background-color: white;
+  position: absolute;
+  display: block;
+  bottom: -0.5em;
+  left: 0;
+}
+
+.animate-hover:hover::after, .header .nav .nav-link ul a:hover::after, footer .footer-container .footer-nav ul a:hover::after, footer .footer-container .footer-copyright .footer-social .social-container:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.button-hover, .gallery-content .gallery-nav button {
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.button-hover:hover, .gallery-content .gallery-nav button:hover {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  color: white;
+  background-color: black;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
 }
 
 .header {
@@ -19,7 +64,7 @@ body {
   color: white;
 }
 
-.nav {
+.header .nav {
   -ms-grid-column: 2;
   -ms-grid-column-span: 10;
   grid-column: 2 / 12;
@@ -31,13 +76,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
 
-.nav .nav-link {
+.header .nav .nav-link {
   width: 22em;
 }
 
-.nav .nav-link ul {
+.header .nav .nav-link ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,13 +95,19 @@ body {
   white-space: nowrap;
 }
 
-.nav .nav-title {
+.header .nav .nav-link ul a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.header .nav .nav-title {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.header-content {
+.header .header-content {
   -ms-grid-row: 2;
   grid-row: 2;
   -ms-grid-column: 2;
@@ -68,9 +120,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
 
-.header-content .header-title {
+.header .header-content .header-title {
   border: 1px solid white;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -87,8 +140,18 @@ body {
   padding-right: 25px;
 }
 
-.header-content .header-title h2 {
-  font-weight: 400;
+.header .header-content .header-title h2 {
+  font-weight: 300;
+}
+
+.header::before {
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 1;
+  content: "";
+  position: absolute;
+  opacity: 10%;
 }
 
 .section-container {
@@ -139,7 +202,12 @@ body {
 }
 
 .section-container .section-content .section-desc h1 {
+  font-weight: 300;
   text-transform: uppercase;
+}
+
+.section-container .section-content .section-desc p {
+  color: #8c8c8c;
 }
 
 .gallery-container {
@@ -168,6 +236,9 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2em;
 }
 
 .gallery-content .gallery-nav button {
@@ -179,6 +250,7 @@ body {
   background: white;
   border: 1px solid #8c8c8c;
   font-weight: 700;
+  font-weight: 400;
 }
 
 .gallery-content .gallery-nav button:focus {
@@ -195,11 +267,15 @@ body {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
 }
 
 .gallery-content .gallery-section .gallery-img {
   background-size: cover;
   background-repeat: no-repeat;
+  background: black;
   width: 13em;
   height: 23em;
   max-width: 13em;
@@ -207,13 +283,34 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: white;
+  margin-top: 1em;
   padding: 1em;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  font-size: 1em;
-  color: white;
-  margin-top: 1em;
+  position: relative;
+  z-index: 0;
+}
+
+.gallery-content .gallery-section .gallery-img h6 {
+  margin: 0;
+  font-size: 2em;
+  width: 4.5em;
+  font-weight: 300;
+  z-index: 2;
+}
+
+.gallery-content .gallery-section .gallery-img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 }
 
 footer {
@@ -231,7 +328,7 @@ footer .footer-container {
   -ms-grid-column: 2;
   -ms-grid-column-span: 10;
   grid-column: 2/12;
-  padding: 0.5em;
+  padding: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,6 +341,12 @@ footer .footer-container .footer-nav {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  display: block;
+}
+
+footer .footer-container .footer-nav h2 {
+  padding: 0;
+  margin: 0;
 }
 
 footer .footer-container .footer-nav ul {
@@ -258,6 +361,13 @@ footer .footer-container .footer-nav ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   white-space: nowrap;
+  font-size: 0.9em;
+}
+
+footer .footer-container .footer-nav ul a {
+  color: white;
+  text-decoration: none;
+  position: relative;
 }
 
 footer .footer-container .footer-copyright .footer-social {
@@ -270,5 +380,14 @@ footer .footer-container .footer-copyright .footer-social {
           justify-content: flex-end;
   -webkit-column-gap: 1em;
           column-gap: 1em;
+}
+
+footer .footer-container .footer-copyright .footer-social .social-container {
+  position: relative;
+}
+
+footer .footer-container .footer-copyright h3 {
+  font-size: 1.2em;
+  font-weight: 300;
 }
 /*# sourceMappingURL=main.css.map */
