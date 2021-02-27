@@ -1,6 +1,17 @@
-const gallery_img = document.querySelectorAll(".gallery-img");
+const exit = document.querySelector("#nav-exit");
+const mobileNav = document.querySelector(".nav-mobile");
+const navHam = document.querySelector(".btn-ham");
 
-gallery_img.forEach((img) => {
-  console.log(img.getAttribute("data-gallery-img"));
-  img.style.background = `url("${img.getAttribute("data-gallery-img")}")`;
+console.log(navHam);
+
+exit.addEventListener("click", () => {
+  mobileNav.style.width = 0;
+  mobileNav.style.transform = `translateX(-10em)`;
+  mobileNav.style.visibility = "hidden";
+});
+
+navHam.addEventListener("click", () => {
+  mobileNav.style.width = "100%";
+  mobileNav.style.transform = `translateX(0)`;
+  mobileNav.style.visibility = "visible";
 });

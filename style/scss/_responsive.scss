@@ -1,0 +1,157 @@
+@import "theme";
+
+@media (max-width: 768px) {
+  .btn-ham {
+    display: block;
+  }
+  .nav-link {
+    display: flex;
+    justify-content: flex-end;
+    ul {
+      display: none;
+    }
+  }
+
+  .section-img {
+    width: 26em;
+    position: relative;
+  }
+
+  .section-desc {
+    text-align: center;
+    padding: 1em;
+  }
+
+  .section-content {
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1em;
+  }
+  .nav-link {
+    width: min-content;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-nav {
+    align-items: center;
+    ul {
+      flex-direction: column;
+      width: min-content;
+      text-align: center;
+    }
+  }
+  .footer-social {
+    justify-content: center;
+  }
+  .footer-copyright {
+    h3 {
+      font-size: 1em;
+    }
+  }
+
+  .gallery-desktop {
+    display: none;
+  }
+
+  .gallery-content {
+    overflow: hidden;
+  }
+  .header {
+    background-image: url("../../images/mobile/image-hero.jpg");
+  }
+
+  .header-title {
+    font-size: 1.7em;
+    width: 100%;
+  }
+
+  .header {
+    overflow: hidden;
+  }
+
+  .gallery-nav {
+    h2 {
+      text-align: center;
+    }
+    button {
+      display: none;
+    }
+  }
+
+  .nav-mobile {
+    display: flex;
+  }
+
+  .gallery-nav-mobile {
+    display: flex;
+  }
+}
+
+@media (min-width: 800px) {
+  .nav-link {
+    ul {
+      display: flex;
+    }
+  }
+  .btn-ham {
+    display: none;
+  }
+
+  .section-img {
+    position: absolute;
+    width: 40em;
+  }
+
+  .section-desc {
+    position: absolute;
+    width: 25em;
+    padding: 5em;
+  }
+
+  .nav-link {
+    width: 22em;
+  }
+
+  .header {
+    background-image: url("../../images/desktop/image-hero.jpg");
+  }
+
+  .header-title {
+    font-size: 3em;
+    width: 15em;
+  }
+
+  .footer-nav {
+    ul {
+      width: 20em;
+    }
+  }
+
+  .footer-social {
+    justify-content: flex-end;
+  }
+
+  .footer-copyright {
+    h3 {
+      font-size: 1.2em;
+    }
+  }
+
+  .gallery-desktop {
+    display: flex;
+  }
+
+  .gallery-mobile {
+    display: none;
+  }
+
+  .gallery-nav-mobile {
+    display: none;
+  }
+  .nav-mobile {
+    display: none;
+  }
+}

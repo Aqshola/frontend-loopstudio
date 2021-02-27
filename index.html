@@ -31,6 +31,23 @@
   <body>
     <div class="container">
       <div class="header">
+        <nav class="nav-mobile">
+          <div class="nav-mobile-nav">
+            <h1>loopstudios</h1>
+            <button id="nav-exit">
+              <img src="./images/icon-close.svg" alt="" srcset="" />
+            </button>
+          </div>
+          <div class="nav-mobile-link">
+            <ul>
+              <a href="#">About</a>
+              <a href="#">Careers</a>
+              <a href="#">Events</a>
+              <a href="#">Products</a>
+              <a href="#">Support</a>
+            </ul>
+          </div>
+        </nav>
         <nav class="nav">
           <div class="nav-title">
             <h1>loopstudios</h1>
@@ -43,9 +60,12 @@
               <a href="#">Products</a>
               <a href="#">Support</a>
             </ul>
+            <button class="btn-ham">
+              <img src="./images/icon-hamburger.svg" alt="" srcset="" />
+            </button>
           </div>
         </nav>
-        <header class="header-content">
+        <header class="header-content animate-delay-500">
           <div class="header-title">
             <h2>Immersive experiences that deliver</h2>
           </div>
@@ -54,11 +74,12 @@
 
       <div class="section-container">
         <div class="section-content">
-          <div class="section-gallery-img">
+          <div class="section-img">
             <img
               src="./images/desktop/image-interactive.jpg"
               alt=""
               srcset=""
+              class="img-desktop"
             />
           </div>
           <div class="section-desc">
@@ -73,69 +94,105 @@
         </div>
       </div>
       <div class="gallery-container">
+        `
         <div class="gallery-content">
           <div class="gallery-nav">
             <h2>Our creations</h2>
-            <button>See all</button>
+            <button class="gallery-btn">See all</button>
           </div>
 
           <div class="gallery-section">
-            <div
-              class="gallery-img"
-              data-gallery-img="./images/desktop/image-deep-earth.jpg"
-            >
-            <div class="img-filter"></div>
-              <h6>Deep earth</h6>
+            <div class="gallery-desktop">
+              <div class="gallery-img">
+                <img
+                  src="./images/desktop/image-deep-earth.jpg"
+                  alt=""
+                  class="img-test"
+                />
+                <div class="img-filter"></div>
+                <h6>Deep earth</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/desktop/image-night-arcade.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>Night Arcade</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/desktop/image-soccer-team.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>Soccer Team VR</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/desktop/image-grid.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>The Grid</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/desktop/image-from-above.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>From Up Above VR</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/desktop/image-pocket-borealis.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>Pocket Borealis</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/desktop/image-curiosity.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>The Curiosity</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/desktop/image-fisheye.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>Make It Fisheye</h6>
+              </div>
             </div>
-            <div
-              class="gallery-img"
-              data-gallery-img="./images/desktop/image-night-arcade.jpg"
-            >
-            <div class="img-filter"></div>
-              <h6>Night Arcade</h6>
+            <div class="gallery-mobile">
+              <div class="gallery-img">
+                <img src="./images/mobile/image-deep-earth.jpg" />
+                <div class="img-filter"></div>
+                <h6>Deep earth</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/mobile/image-night-arcade.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>Night Arcade</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/mobile/image-soccer-team.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>Soccer Team VR</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/mobile/image-grid.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>The Grid</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/mobile/image-from-above.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>From Up Above VR</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/mobile/image-pocket-borealis.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>Pocket Borealis</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/mobile/image-curiosity.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>The Curiosity</h6>
+              </div>
+              <div class="gallery-img">
+                <img src="./images/mobile/image-fisheye.jpg" alt="" />
+                <div class="img-filter"></div>
+                <h6>Make It Fisheye</h6>
+              </div>
             </div>
-            <div
-              class="gallery-img"
-              data-gallery-img="./images/desktop/image-soccer-team.jpg"
-            >
-            <div class="img-filter"></div>
-              <h6>Soccer Team VR</h6>
-            </div>
-            <div
-              class="gallery-img"
-              data-gallery-img="./images/desktop/image-grid.jpg"
-            >
-            <div class="img-filter"></div>
-              <h6>The Grid</h6>
-            </div>
-            <div
-              class="gallery-img"
-              data-gallery-img="./images/desktop/image-from-above.jpg"
-            >
-            <div class="img-filter"></div>
-              <h6>From Up Above VR</h6>
-            </div>
-            <div
-              class="gallery-img"
-              data-gallery-img="./images/desktop/image-pocket-borealis.jpg"
-            >
-            <div class="img-filter"></div>
-              <h6>Pocket Borealis</h6>
-            </div>
-            <div
-              class="gallery-img"
-              data-gallery-img="./images/desktop/image-curiosity.jpg"
-            >
-            <div class="img-filter"></div>
-              <h6>The Curiosity</h6>
-            </div>
-            <div
-              class="gallery-img"
-              data-gallery-img="./images/desktop/image-fisheye.jpg"
-            >
-            <div class="img-filter"></div>
-              <h6>Make It Fisheye</h6>
-            </div>
+          </div>
+          <div class="gallery-nav-mobile">
+            <button class="gallery-btn">See all</button>
           </div>
         </div>
       </div>
@@ -146,7 +203,7 @@
             <ul>
               <a href="#">About</a>
               <a href="#">Careers</a>
-              <a href="#">Events</li>
+              <a href="#">Events</a>
               <a href="#">Products</a>
               <a href="#">Support</a>
             </ul>
@@ -154,7 +211,7 @@
           <div class="footer-copyright">
             <div class="footer-social">
               <div class="social-container">
-                <img src="./images/icon-facebook.svg" />
+                <img src="./images/icon-facebook.svg" class="img-test" />
               </div>
               <div class="social-container">
                 <img src="./images/icon-instagram.svg" />
