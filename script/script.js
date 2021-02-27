@@ -15,3 +15,7 @@ navHam.addEventListener("click", () => {
   mobileNav.style.transform = `translateX(0)`;
   mobileNav.style.visibility = "visible";
 });
+
+AOS.init({
+  duration: 1000,
+});

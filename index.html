@@ -14,7 +14,9 @@
     />
 
     <title>Frontend Mentor | Loopstudios landing page</title>
+
     <link rel="stylesheet" href="style/css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -65,14 +67,14 @@
             </button>
           </div>
         </nav>
-        <header class="header-content animate-delay-500">
+        <header class="header-content">
           <div class="header-title">
             <h2>Immersive experiences that deliver</h2>
           </div>
         </header>
       </div>
 
-      <div class="section-container">
+      <div class="section-container" data-aos="fade-up">
         <div class="section-content">
           <div class="section-img">
             <img
@@ -101,7 +103,7 @@
             <button class="gallery-btn">See all</button>
           </div>
 
-          <div class="gallery-section">
+          <div class="gallery-section" data-aos="zoom-in">
             <div class="gallery-desktop">
               <div class="gallery-img">
                 <img
@@ -229,6 +231,7 @@
       </footer>
     </div>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./script/script.js"></script>
   </body>
 </html>
